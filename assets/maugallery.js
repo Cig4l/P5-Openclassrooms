@@ -1,17 +1,35 @@
-(function($) {
-  $.fn.mauGallery = function(options) {
+(function($) {   // fonction anonyme auto-invoquée qui prend un seul paramètre $ 
+  $.fn.mauGallery = function(options) { 
+    // $.fn = permet d'ajouter de nouvelles méthodes à l'objet jQuery
+    // ces méthodes seront disponibles pour être invoquées sur les objets jQuery 
+    // retournés par $(). 
+    //
+    // mauGallery = a simple jQuery gallery for bootstrap 4 
+    //
+    // options = objet JavaScript 
     var options = $.extend($.fn.mauGallery.defaults, options);
-    var tagsCollection = [];
+    // $.extend() = méthode fournie par jQuery pour fusionner le contenu de deux 
+    // ou plusieurs objets JavaScript en un seul objet
+    //
+    // => fusionne les options par défaut fournies par 
+    // $.fn.mauGallery.defaults avec les options fournies par l'utilisateur
+    // => les options spécifiées par l'utilisateur écrasent les options par défaut 
+    // si elles ont le même nom de propriété
+    // le résultat de cette fusion est ensuite stocké dans la variable options
+    var tagsCollection = [];  // liste des noms des filtres
     return this.each(function() {
       $.fn.mauGallery.methods.createRowWrapper($(this));
+      // lightBox = modale "gallerie" + bckground assombri
       if (options.lightBox) {
         $.fn.mauGallery.methods.createLightBox(
-          $(this),
+          $(this),  // élément jQuery actuel sur lequel la méthode est invoquée
           options.lightboxId,
           options.navigation
         );
       }
       $.fn.mauGallery.listeners(options);
+      // ici, méthode qui est responsable d'attacher des gestionnaires d'événements 
+      // à différents éléments de la galerie
 
       $(this)
         .children(".gallery-item")
@@ -40,6 +58,7 @@
       $(this).fadeIn(500);
     });
   };
+  // configure la gallerie (=/= lightbox)
   $.fn.mauGallery.defaults = {
     columns: 3,
     lightBox: true,
@@ -48,6 +67,7 @@
     tagsPosition: "bottom",
     navigation: true
   };
+  // ouverture de la lightbox
   $.fn.mauGallery.listeners = function(options) {
     $(".gallery-item").on("click", function() {
       if (options.lightBox && $(this).prop("tagName") === "IMG") {
@@ -57,6 +77,10 @@
       }
     });
 
+    // différents gestionnaires d'événements sont attachés à des 
+    // éléments spécifiques de la galerie
+
+    // nav-link = filtre
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
     $(".gallery").on("click", ".mg-prev", () =>
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
@@ -119,11 +143,13 @@
         .attr("src", element.attr("src"));
       $(`#${lightboxId}`).modal("toggle");
     },
+
     prevImage() {
-      let activeImage = null;
+      let activeImage = undefined;
       $("img.gallery-item").each(function() {
+        // si this = image dans lightbox
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
-          activeImage = $(this);
+          activeImage = $(this).parent().prev().children(); 
         }
       });
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
@@ -162,8 +188,7 @@
       let activeImage = null;
       $("img.gallery-item").each(function() {
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
-          activeImage = $(this);
-        }
+          activeImage = $(this).parent().next().children();        }
       });
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
       let imagesCollection = [];
