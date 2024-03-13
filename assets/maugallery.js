@@ -32,7 +32,7 @@
       // à différents éléments de la galerie
 
       $(this)
-        .children(".gallery-item")
+        .children(".gallery-item")  // images de la gallerie
         .each(function(index) {
           $.fn.mauGallery.methods.responsiveImageItem($(this));
           $.fn.mauGallery.methods.moveItemInRowWrapper($(this));
@@ -81,7 +81,11 @@
     // éléments spécifiques de la galerie
 
     // nav-link = filtre
-    $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
+    $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag
+    );
+    $(".gallery").on("mouseenter mouseleave", ".nav-link", function(){  // couleur hover
+      $(this).css("color", "green");
+    });
     $(".gallery").on("click", ".mg-prev", () =>
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
     );
@@ -261,12 +265,15 @@
       }
     },
     filterByTag() {
-      if ($(this).hasClass("active-tag")) {
-        return;
-      }
+      // if ($(this).hasClass("active-tag")) {
+      //   return;
+      // }
+      // $(".active-tag").removeClass("active active-tag");
+      // $(this).addClass("active-tag");&&
+      $(".nav-link").css("color", "blue")
+      $(".active-tag").css("color", "red");
       $(".active-tag").removeClass("active active-tag");
       $(this).addClass("active-tag");
-
       var tag = $(this).data("images-toggle");
 
       $(".gallery-item").each(function() {
