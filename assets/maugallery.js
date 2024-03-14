@@ -267,16 +267,17 @@
         console.error(`Unknown tags position: ${position}`);
       }
     },
+
     filterByTag() {
-      // if ($(this).hasClass("active-tag")) {
-      //   return;
-      // }
+      if ($("active-tag")) {
+        $('.nav-link').css("color", "black");
+        $('.nav-link').css("background-color", "transparent");
+        $(this).css("color", "#fff");
+        $(this).css("background-color", "#BEB45A");
+      }
       // $(".active-tag").removeClass("active active-tag");
-      // $(this).addClass("active-tag");&&
-      $(".nav-link").css("color", "blue")
-      $(".active-tag").css("color", "red");
-      $(".active-tag").removeClass("active active-tag");
-      $(this).addClass("active-tag");
+      // $(this).addClass("active-tag");
+      
       var tag = $(this).data("images-toggle");
 
       $(".gallery-item").each(function() {
