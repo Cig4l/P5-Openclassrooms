@@ -83,9 +83,12 @@
     // nav-link = filtre
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag
     );
-    $(".gallery").on("mouseenter mouseleave", ".nav-link", function(){  // couleur hover
-      $(this).css("color", "green");
-    });
+    // $(".gallery").on("mouseenter", ".nav-link", function(){  
+    //   $(this).css("color", "green");
+    // });
+    // $(".gallery").on("mouseleave", ".nav-link", function(){ 
+    //   $(this).css("color", "black");
+    // });
     $(".gallery").on("click", ".mg-prev", () =>
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
     );
