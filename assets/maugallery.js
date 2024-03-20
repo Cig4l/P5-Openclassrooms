@@ -83,12 +83,7 @@
     // nav-link = filtre
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag
     );
-    // $(".gallery").on("mouseenter", ".nav-link", function(){  
-    //   $(this).css("color", "green");
-    // });
-    // $(".gallery").on("mouseleave", ".nav-link", function(){ 
-    //   $(this).css("color", "black");
-    // });
+    
     $(".gallery").on("click", ".mg-prev", () =>
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
     );
@@ -153,22 +148,17 @@
 
     prevImage() {
       let activeImage = undefined;
-      $("img.gallery-item").each(function() {
-        // si this = image dans lightbox
-        if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
-          activeImage = $(this).parent().prev().children(); 
-        }
-      });
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
+
       let imagesCollection = [];
       if (activeTag === "all") {
-        $(".item-column").each(function() {
+        $(".item-column").each(function() { // get all images for "any" filter
           if ($(this).children("img").length) {
             imagesCollection.push($(this).children("img"));
           }
         });
       } else {
-        $(".item-column").each(function() {
+        $(".item-column").each(function() { // get all filtered images
           if (
             $(this)
               .children("img")
@@ -178,35 +168,32 @@
           }
         });
       }
-      let index = 0,
-        next = null;
+      let index = imagesCollection.length,
+      prev = null;
+      console.log(index);
 
       $(imagesCollection).each(function(i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i ;
+        if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
+          activeImage = imagesCollection[i-1] || imagesCollection[0];
+          index = i-1;
         }
       });
-      next =
-        imagesCollection[index] ||
-        imagesCollection[imagesCollection.length - 1];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+      prev = imagesCollection[index] || imagesCollection[0];
+      $(".lightboxImage").attr("src", $(prev).attr("src"));
     },
     nextImage() {
-      let activeImage = null;
-      $("img.gallery-item").each(function() {
-        if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
-          activeImage = $(this).parent().next().children();        }
-      });
+      let activeImage = undefined;
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
+
       let imagesCollection = [];
       if (activeTag === "all") {
-        $(".item-column").each(function() {
+        $(".item-column").each(function() { // get all images for "any" filter
           if ($(this).children("img").length) {
             imagesCollection.push($(this).children("img"));
           }
         });
       } else {
-        $(".item-column").each(function() {
+        $(".item-column").each(function() { // get all filtered images
           if (
             $(this)
               .children("img")
@@ -218,12 +205,22 @@
       }
       let index = 0,
         next = null;
+      
 
       $(imagesCollection).each(function(i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
+        if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
+          activeImage = imagesCollection[i+1] || imagesCollection[0];
+          index = i+1;
         }
       });
+
+      // $(imagesCollection).each(function(i) {    // get active image index
+      //   if ($(activeImage).attr("src") === $(this).attr("src")) {
+      //     index = i;
+      //   }
+      // });
+      
+      // next = (index<imagesCollection.length) ? imagesCollection[index] : imagesCollection[0];
       next = imagesCollection[index] || imagesCollection[0];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
@@ -275,8 +272,8 @@
         $(this).css("color", "#fff");
         $(this).css("background-color", "#BEB45A");
       }
-      // $(".active-tag").removeClass("active active-tag");
-      // $(this).addClass("active-tag");
+      $(".active-tag").removeClass("active-tag");
+      $(this).addClass("active-tag");
       
       var tag = $(this).data("images-toggle");
 
