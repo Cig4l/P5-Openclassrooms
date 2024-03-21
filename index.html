@@ -27,9 +27,9 @@
   gtag('config', 'G-Z8PXNR13DJ');
 </script>
 
-<div class="top-header">
+<header class="top-header">
 	<h3 class="name" itemprop="name">Nina Carducci</h3>
-	<div class="nav">   
+	<nav class="nav" role="navigation">   
 		<ul>
 			<li><a href="#about">À propos</a></li>
 			<li><a href="#gallery">Galerie</a></li>
@@ -37,141 +37,143 @@
 			<li><a href="#contact">Contact</a></li>
 			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt="Logo d'instagram."></a></li>
 		</ul>
-	</div>
-</div>
-<div id="header">
+	</nav>
+</header>
+<main role="main">
+	<section id="header">
 
-	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-		<div class="carousel-indicators">
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-		</div>
-		<div class="carousel-inner">
-			<div class="carousel-item active" itemscope itemtype="http://schema.org/ImageObject>
-				<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg" class="d-block w-100" alt="Un homme en costume traverse un passage piéton. Il tourne le dos à l'objectif." itemprop="contentUrl">
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			</div>
-			<div class="carousel-item" itemscope itemtype="http://schema.org/ImageObject>
-				<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg" class="d-block w-100" alt="Une foule de jeunes adultes souriante, composée majoritairement d'hommes lève le bras, probablement en signe d'encouragement." itemprop="contentUrl">
+			<div class="carousel-inner">
+				<div class="carousel-item active" itemscope itemtype="http://schema.org/ImageObject>
+					<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg" class="d-block w-100" alt="Un homme en costume traverse un passage piéton. Il tourne le dos à l'objectif." itemprop="contentUrl">
+				</div>
+				<div class="carousel-item" itemscope itemtype="http://schema.org/ImageObject>
+					<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg" class="d-block w-100" alt="Une foule de jeunes adultes souriante, composée majoritairement d'hommes lève le bras, probablement en signe d'encouragement." itemprop="contentUrl">
+				</div>
+				<div class="carousel-item" itemscope itemtype="http://schema.org/ImageObject>
+					<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg" class="d-block w-100" alt="Un couple de jeune mariés s'embrasse en dansant, sous les applaudissements des invités." itemprop="contentUrl">
+				</div>
 			</div>
-			<div class="carousel-item" itemscope itemtype="http://schema.org/ImageObject>
-				<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg" class="d-block w-100" alt="Un couple de jeune mariés s'embrasse en dansant, sous les applaudissements des invités." itemprop="contentUrl">
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</section>
+	<section id="about">
+		<div class="picture left">
+			<img src="./assets/images/nina.png" alt="Photographie de Nina Carducci, une jeune femme brune aux cheveux bouclés en salopette et marinière. ">
+		</div>
+		<div id="about-me">
+			<h1 class="about-me__title">A propos de moi</h1>
+			<p class="about-me__introduction" itemprop="description"><strong>Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</strong></p>
+			<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
+				C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
+		</div>
+	</section>
+	<section id="gallery">
+		<h2 class="title">Portfolio</h2>
+		<div class="container py-3">
+			<div class="gallery" style="display: none" itemscope itemtype="http://schema.org/ImageGallery">
+				<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg" alt="Un concert de rock, on peut voir des mains levées en premier plan et les artistes en second plan" itemprop="image"/>
+				<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" alt="Photographie en plan américain d'un trentenaire en costume, les bras croisés."/>
+				<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg" alt="Une jeune femme souriante assise sur une chaise de bureau. En premier plan flouté, on distingue une possible collègue." itemprop="image"/>
+				<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg" alt="on voit deux paires de mains se toucher le bout des doigts, dans un geste de connexion." itemprop="image"/>
+				<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg" alt="Portrait photo d'un homme noir tretenaire qui ferme les yeux."/>
+				<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg" alt="Un couple de jeunes mariés se tient la main en souriant. En arrière-plan, des palmiers." itemprop="image"/>
+				<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg" alt="Portrait d'une jeune femme brune à lunettes, en chemise noire. Plan poitrine." itemprop="image"/>
+				<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg" alt="Un chanteur sur scène. Il lève le bras ce qui cache son visage, et avec l'autre bras tient un micro." itemprop="image"/>
+				<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg" alt="Une jeune femme brune, souriante, porte un haut avec des motifs à pois. Elle est assise et en train d'utiliser son ordinateur." itemprop="image"/>
 			</div>
 		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-		</button>
-	</div>
-</div>
-<div id="about">
-	<div class="picture left">
-		<img src="./assets/images/nina.png" alt="Photographie de Nina Carducci, une jeune femme brune aux cheveux bouclés en salopette et marinière. ">
-	</div>
-	<div id="about-me">
-		<h1 class="about-me__title">A propos de moi</h1>
-		<p class="about-me__introduction" itemprop="description"><strong>Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</strong></p>
-		<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
-			C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
-	</div>
-</div>
-<div id="gallery">
-	<h2 class="title">Portfolio</h2>
-	<div class="container py-3">
-		<div class="gallery" style="display: none" itemscope itemtype="http://schema.org/ImageGallery">
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg" alt="Un concert de rock, on peut voir des mains levées en premier plan et les artistes en second plan" itemprop="image"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" alt="Photographie en plan américain d'un trentenaire en costume, les bras croisés."/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg" alt="Une jeune femme souriante assise sur une chaise de bureau. En premier plan flouté, on distingue une possible collègue." itemprop="image"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg" alt="on voit deux paires de mains se toucher le bout des doigts, dans un geste de connexion." itemprop="image"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg" alt="Portrait photo d'un homme noir tretenaire qui ferme les yeux."/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg" alt="Un couple de jeunes mariés se tient la main en souriant. En arrière-plan, des palmiers." itemprop="image"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg" alt="Portrait d'une jeune femme brune à lunettes, en chemise noire. Plan poitrine." itemprop="image"/>
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg" alt="Un chanteur sur scène. Il lève le bras ce qui cache son visage, et avec l'autre bras tient un micro." itemprop="image"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg" alt="Une jeune femme brune, souriante, porte un haut avec des motifs à pois. Elle est assise et en train d'utiliser son ordinateur." itemprop="image"/>
-		</div>
-	</div>
-	<div class="quote">
+	</section>
+	<section class="quote">
 		<figure>
 			<blockquote>
 				<p class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</p>
 			</blockquote>
 			<figcaption class="quote__author">- Richard Avedon</figcaption>
 		</figure>
-	</div>
-</div>
-<div id="services">
-	<h2 class="title">Mes services</h2>
-	<div class="container">
-		<div class="service">
-			<div class="service__description">
-				<h3 itemprop="name">Shooting photo</h3>
-				<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
+	</section>
+	<section id="services">
+		<h2 class="title">Mes services</h2>
+		<div class="container">
+			<div class="service">
+				<div class="service__description">
+					<h3 itemprop="name">Shooting photo</h3>
+					<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
+				</div>
+				<div class="service__price">
+					<h4 itemprop="price">350€/demi journée</h4>
+					<span>Matériel, déplacement inclus</span>
+				</div>
+	
 			</div>
-			<div class="service__price">
-				<h4 itemprop="price">350€/demi journée</h4>
-				<span>Matériel, déplacement inclus</span>
+			<div class="service">
+				<div class="service__description">
+					<h3 itemprop="name">Retouches</h3>
+					<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
+				</div>
+				<div class="service__price">
+					<h4 itemprop="price">50€/photo</h4>
+					<span>2 AR par photo</span>
+				</div>
 			</div>
-
+			<div class="service">
+				<div class="service__description">
+					<h3 itemprop="name">Album photos</h3>
+					<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé</p>
+				</div>
+				<div class="service__price">
+					<h4 itemprop="price">400€ album A4</h4>
+					<span>30 pages recto/verso</span>
+				</div>
+			</div>
 		</div>
-		<div class="service">
-			<div class="service__description">
-				<h3 itemprop="name">Retouches</h3>
-				<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
+	</section>
+	<section class="quote">
+		<figure>
+			<blockquote>
+				<p class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</p>
+			</blockquote>
+			<figcaption class="quote__author">- Richard Avedon</figcaption>
+		</figure>
+	</section>
+	<section id="contact">
+		<div class="container">
+			<div class="form-container">
+				<h2>Une question ? Une demande de devis ?</h3>
+				<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
+				<form action="" method="post" itemprop="potentialAction" itemscope itemtype="http://schema.org/CommunicateAction">
+					<label for="nom">
+						<span itemprop="nomLabel">Nom :</span>
+						<input type="text" name="nom" id="nom" aria-required="true" required>
+					</label>
+					<label for="email">
+						<span itemprop="emailLabel">Email :</span>
+						<input type="email" name="email" id="email" aria-required="true" required>
+					</label>
+					<label for="message">
+						<span itemprop="messageLabel">Message :</span>
+						<textarea name="message" id="message" cols="30" rows="10" aria-required="true" required></textarea>
+					</label>
+					<input type="submit" value="Envoyer"/>
+				</form>
 			</div>
-			<div class="service__price">
-				<h4 itemprop="price">50€/photo</h4>
-				<span>2 AR par photo</span>
+			<div class="picture right">
+				<img src="./assets/images/camera.png" alt="Un appareil photo avec un objectif, dans un éclairage sombre et orangé.">
 			</div>
 		</div>
-		<div class="service">
-			<div class="service__description">
-				<h3 itemprop="name">Album photos</h3>
-				<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé</p>
-			</div>
-			<div class="service__price">
-				<h4 itemprop="price">400€ album A4</h4>
-				<span>30 pages recto/verso</span>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="quote">
-	<figure>
-		<blockquote>
-			<p class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</p>
-		</blockquote>
-		<figcaption class="quote__author">- Richard Avedon</figcaption>
-	</figure>
-</div>
-<div id="contact">
-	<div class="container">
-		<div class="form-container">
-			<h2>Une question ? Une demande de devis ?</h3>
-			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
-			<form action="" method="post" itemprop="potentialAction" itemscope itemtype="http://schema.org/CommunicateAction">
-				<label for="nom">
-					<span itemprop="nomLabel">Nom :</span>
-					<input type="text" name="nom" id="nom" aria-required="true" required>
-				</label>
-				<label for="email">
-					<span itemprop="emailLabel">Email :</span>
-					<input type="email" name="email" id="email" aria-required="true" required>
-				</label>
-				<label for="message">
-					<span itemprop="messageLabel">Message :</span>
-					<textarea name="message" id="message" cols="30" rows="10" aria-required="true" required></textarea>
-				</label>
-				<input type="submit" value="Envoyer"/>
-			</form>
-		</div>
-		<div class="picture right">
-			<img src="./assets/images/camera.png" alt="Un appareil photo avec un objectif, dans un éclairage sombre et orangé.">
-		</div>
-	</div>
-</div>
+	</section>
+</main>
 </body>
 </html>
