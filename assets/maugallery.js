@@ -270,7 +270,7 @@
         $('.nav-link').css("color", "black");
         $('.nav-link').css("background-color", "transparent");
         $(this).css("color", "#fff");
-        $(this).css("background-color", "#BEB45A");
+        $(this).css("background-color", "#7B7014");
       }
       $(".active-tag").removeClass("active-tag");
       $(this).addClass("active-tag");
