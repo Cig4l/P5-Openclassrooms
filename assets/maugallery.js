@@ -170,8 +170,6 @@
       }
       let index = imagesCollection.length,
       prev = null;
-      console.log(index);
-      console.log(index-1),
 
       $(imagesCollection).each(function(i) {
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
