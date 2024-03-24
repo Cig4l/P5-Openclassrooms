@@ -48,7 +48,15 @@
 			</div>
 			<div class="carousel-inner">
 				<div class="carousel-item active" itemscope itemtype="http://schema.org/ImageObject">
-					<img src="./assets/images/slider/ryori-iwata-DESKTOP.jpg" class="d-block w-100" alt="Un homme en costume traverse un passage piéton. Il tourne le dos à l'objectif." itemprop="contentUrl">
+					<picture class="d-block w-100" alt="Un homme en costume traverse un passage piéton. Il tourne le dos à l'objectif." itemprop="contentUrl">
+						<!-- Pour les écrans larges -->
+						<source media="(min-width: 768px)" srcset="./assets/images/slider/ryori-iwata-DESKTOP.jpg">
+						<!-- Pour les écrans plus petits -->
+						<source media="(max-width: 767px)" srcset="image-small.jpg">
+						<!-- Fallback pour les navigateurs ne supportant pas la balise <picture> -->
+						<img src="image-small.jpg" alt="Description de l'image">
+					  </picture>					  
+					<!-- <img src="./assets/images/slider/ryori-iwata-DESKTOP.jpg" class="d-block w-100" alt="Un homme en costume traverse un passage piéton. Il tourne le dos à l'objectif." itemprop="contentUrl"> -->
 				</div>
 				<div class="carousel-item" itemscope itemtype="http://schema.org/ImageObject">
 					<img src="./assets/images/slider/nicholas-green-DESKTOP.jpg" class="d-block w-100" alt="Une foule de jeunes adultes souriante, composée majoritairement d'hommes lève le bras, probablement en signe d'encouragement." itemprop="contentUrl">

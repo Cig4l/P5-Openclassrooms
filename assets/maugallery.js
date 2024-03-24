@@ -18,6 +18,14 @@
     // le résultat de cette fusion est ensuite stocké dans la variable options
     var tagsCollection = [];  // liste des noms des filtres
     return this.each(function() {
+    //   if (window.innerWidth <= 768) {
+    //     console.log("La taille de l'écran est inférieure ou égale à 768 pixels.");
+    // } else {
+    //     console.log("La taille de l'écran est supérieure à 768 pixels.");
+    //     $(".carousel-inner .carousel-item:nth-child(1) img").attr("src", "./assets/images/slider/ryori-iwata-DESKTOP.jpg");
+    //     $(".carousel-inner .carousel-item:nth-child(2) img").attr("src", "./assets/images/slider/nicholas-green-DESKTOP.jpg");
+    //     $(".carousel-inner .carousel-item:nth-child(3) img").attr("src", "./assets/images/slider/edward-cisneros-DESKTOP.jpg");
+    // }
       $.fn.mauGallery.methods.createRowWrapper($(this));
       // lightBox = modale "gallerie" + bckground assombri
       if (options.lightBox) {
