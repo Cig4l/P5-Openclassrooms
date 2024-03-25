@@ -3,7 +3,7 @@
 <head>
 	<title>Nina Carducci - Photographe | Portfolio </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Découvrez le portfolio professionnel de [Nom de la photographe], spécialisée dans la capture d'instants uniques et d'émotions sincères. Parcourez mes travaux et laissez-vous transporter par la beauté de chaque cliché.">
+	<meta name="description" content="Découvrez le portfolio professionnel de Nina Carducci, photographe professionnelle à Bordeaux. Contactez-la sans plus tarder !">
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,65 @@
 	<link rel="icon" type="image/x-icon" href="./favicon.ico">
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
 	<meta charset="UTF-8">
+	<!-- TWITTER -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@nina_carducci">
+	<meta name="twitter:title" content="Nina Carducci, photographe professionnelle à Bordeaux">
+	<meta name="twitter:description" content="Découvrez le portfolio professionnel de Nina Carducci, photographe professionnelle à Bordeaux. Contactez-la sans plus tarder !">
+	<meta name="twitter:creator" content="@author_handle">
+	<meta name="twitter:image:src" content="assets/images/nina-DESKTOP.jpg">
+	<!-- OPEN GRAPH : FB + INSTA -->
+	<meta property="og:title" content="Nina Carducci, photographe professionnelle à Bordeaux">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="fr_FR">
+	<meta property="author" content="OpenClassRooms">
+	<meta property="og:url" content="https://github.com/Cig4l/P5-Openclassrooms">
+	<meta property="og:image"
+		content="assets/images/nina-DESKTOP.jpg">
+	<meta property="og:description"
+		content="Découvrez le portfolio professionnel de Nina Carducci, photographe professionnelle à Bordeaux. Contactez-la sans plus tarder !">
+	<meta property="og:site_name" content="Nina Carducci, photographe professionnelle à Bordeaux">
+	<meta name="instagram:title" content="Nina Carducci, photographe professionnelle à Bordeaux">
+	<meta name="instagram:site" content="@ninacarducci.photo">
+	<meta name="instagram:caption" content="Découvrez le portfolio professionnel de Nina Carducci, photographe professionnelle à Bordeaux. Contactez-la sans plus tarder ! https://cig4l.github.io/P5-Openclassrooms/ ">
+		<!-- RICH SNIPPETS -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"name": "Nina Carducci Photographe",
+				"@type": "LocalBusiness",
+				"image": "assets/images/nina-DESKTOP.jpg",
+				"@id": "assets/images/nina-DESKTOP.jpg",
+				"url": "https://github.com/Cig4l/P5-Openclassrooms",
+				"telephone": "05 56 67 78 89",
+				"priceRange": "50€ 400€",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "68 avenue Alsace-Lorraine",
+					"postalCode": "33200",
+					"addressLocality": "Bordeaux",
+					"addressCountry": "FR"
+				},
+				"geo": {
+					"@type": "GeoCoordinates",
+					"latitude": 44.8466732,
+					"longitude": -0.6065805
+				},
+				"openingHoursSpecification": {
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": [
+						"Monday",
+						"Tuesday",
+						"Wednesday",
+						"Thursday",
+						"Friday"
+					],
+					"opens": "10:00",
+					"closes": "19:00"
+				},
+				"sameAs": "https://www.instagram.com/ninacarducci.photo/"
+			}
+		</script>
 </head>
 <body>
 <!-- Google tag (gtag.js) -->
@@ -33,7 +92,7 @@
 			<li><a href="#gallery">Galerie</a></li>
 			<li><a href="#services">Service</a></li>
 			<li><a href="#contact">Contact</a></li>
-			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.webp" alt="Logo d'instagram." itemprop="image"></a></li>
+			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank" aria-label="Accéder à la page instagram professionnelle de Nina Carducci"><img src="assets/images/instagram.webp" alt="Logo d'instagram." itemprop="image" width="20"height="20"></a></li>
 		</ul>
 	</nav>
 </header>
@@ -47,20 +106,29 @@
 			</div>
 			<div class="carousel-inner">
 				<div class="carousel-item active" itemscope itemtype="http://schema.org/ImageObject">
-					<img src="./assets/images/slider/ryori-iwata-DESKTOP.jpg" class="d-block w-100" alt="Un homme en costume traverse un passage piéton. Il tourne le dos à l'objectif." itemprop="contentUrl"  itemprop="image" width="424" height="424" loading="lazy">
+					<img src="./assets/images/slider/ryori-iwata-DESKTOP.jpg" class="d-block w-100" width="1918" height="auto" 
+					alt="Un homme en costume traverse un passage piéton. Il tourne le dos à l'objectif." itemprop="contentUrl"  itemprop="image"
+					srcset="assets/images/slider/ryoji-iwata-MOBILE.jpg 768w,
+					./assets/images/slider/ryori-iwata-DESKTOP.jpg 1920w" sizes="100vw">
 				</div>
 				<div class="carousel-item" itemscope itemtype="http://schema.org/ImageObject">
-					<img src="./assets/images/slider/nicholas-green-DESKTOP.jpg" class="d-block w-100" alt="Une foule de jeunes adultes souriante, composée majoritairement d'hommes lève le bras, probablement en signe d'encouragement." itemprop="contentUrl"  itemprop="image" width="424" height="424" loading="lazy">
+					<img src="./assets/images/slider/nicholas-green-DESKTOP.jpg" class="d-block w-100" width="1918" height="auto" 
+					alt="Une foule de jeunes adultes souriante, composée majoritairement d'hommes lève le bras, probablement en signe d'encouragement." itemprop="contentUrl"  itemprop="image" loading="lazy"
+					srcset="assets/images/slider/nicholas-green-MOBILE.jpg 768w,
+					./assets/images/slider/nicholas-green-DESKTOP.jpg 1920w" sizes="100vw">
 				</div>
 				<div class="carousel-item" itemscope itemtype="http://schema.org/ImageObject">
-					<img src="./assets/images/slider/edward-cisneros-DESKTOP.jpg" class="d-block w-100" alt="Un couple de jeune mariés s'embrasse en dansant, sous les applaudissements des invités." itemprop="contentUrl"  itemprop="image" width="424" height="424" loading="lazy">
+					<img src="./assets/images/slider/edward-cisneros-DESKTOP.jpg" class="d-block w-100" width="1918" height="auto"
+					alt="Un couple de jeune mariés s'embrasse en dansant, sous les applaudissements des invités." itemprop="contentUrl"  itemprop="image" loading="lazy"
+					srcset="assets/images/slider/edward-cisneros-MOBILE.jpg 768w,
+					./assets/images/slider/edward-cisneros-DESKTOP.jpg 1920w" sizes="100vw">
 				</div>
 			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" aria-label="Image précédente">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Previous</span>
 			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" aria-label="Image suivante">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Next</span>
 			</button>
@@ -68,7 +136,7 @@
 	</div>
 	<section id="about">
 		<div class="picture left">
-			<img src="./assets/images/nina-DESKTOP.jpg" alt="Photographie de Nina Carducci, une jeune femme brune aux cheveux bouclés en salopette et marinière. ">
+			<img src="./assets/images/nina-DESKTOP.jpg" alt="Photographie de Nina Carducci, une jeune femme brune aux cheveux bouclés en salopette et marinière." width="450" height="auto">
 		</div>
 		<div id="about-me" itemscope itemtype="https://schema.org/Person">
 			<h1 class="about-me__title" itemprop="headline">A propos de moi</h1>
@@ -166,7 +234,7 @@
 				</form>
 			</div>
 			<div class="picture right">
-				<img src="./assets/images/camera-DESKTOP.jpg" alt="Un appareil photo avec un objectif, dans un éclairage sombre et orangé.">
+				<img src="./assets/images/camera-DESKTOP.jpg" alt="Un appareil photo avec un objectif, dans un éclairage sombre et orangé." width="450" height="auto">
 			</div>
 		</div>
 	</section>
