@@ -79,7 +79,7 @@
 		</script>
 </head>
 <body>
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8PXNR13DJ"></script> -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8PXNR13DJ"></script> <!-- Google Analytics -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -140,16 +140,16 @@
 			</button>
 		</div>
 	</div>
-	<section id="about">
+	<section id="about"  itemscope itemtype="https://schema.org/Person">
 		<div class="picture left">
 			<img src="assets/images/Redimensionné/nina_450x449.webp" alt="Photographie de Nina Carducci, une jeune femme brune aux cheveux bouclés en salopette et marinière." 
-			width="450" height="449" style="max-width: 100%; height: auto;">
+			width="450" height="449" style="max-width: 100%; height: auto;" itemprop="image">
 		</div>
-		<div id="about-me" itemscope itemtype="https://schema.org/Person">
+		<div id="about-me" itemprop="description">
 			<h1 class="about-me__title" itemprop="headline">A propos de moi</h1>
-			<p class="about-me__introduction" itemprop="description"><strong>Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</strong></p>
-			<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
-				C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
+			<p class="about-me__introduction" style="font-size: 1rem;">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestinée. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</p>
+			<p>Je suis Nina Carducci, une <strong>photographe</strong> passionnée basée à <strong>Bordeaux</strong>. Spécialisée dans les <em>shootings photo</em>, la création d'<em>albums photo</em> et les <em>retouches photo</em>, je m'efforce de capturer l'essence de chaque instant à travers mon objectif, pour vous offrir des souvenirs inoubliables. Que ce soit pour un <em>mariage</em>, une <em>entreprise</em>, un <em>concert</em> ou un <em>portrait</em>, je mets mon talent et ma créativité à votre service.</p>
+			<p>Soucieuse de répondre à vos besoins, je suis également disponible pour des séances de shooting et des collaborations en <strong>Île-de-France</strong>.</p>
 		</div>
 	</section>
 	<section id="gallery" itemscope itemtype="http://schema.org/ImageGallery">
@@ -173,7 +173,7 @@
 			<blockquote>
 				<p class="quote__text" itemprop="text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</p>
 			</blockquote>
-			<figcaption class="quote__author" itemprop="author">- Richard Avedon</figcaption>
+			<figcaption class="quote__author" itemprop="author">- Richard Avedon, photographe</figcaption>
 		</figure>
 	</div>
 	<section id="services" itemscope itemtype="https://schema.org/Photograph">
@@ -182,7 +182,7 @@
 			<div class="service">
 				<div class="service__description">
 					<h3 itemprop="name">Shooting photo</h3>
-					<p itemprop="description">Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
+					<p itemprop="description">Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Basée sur Bordeaux, je me déplace cependant en Île-de-France pour réaliser vos photos</p>
 				</div>
 				<div class="service__price">
 					<h4 itemprop="price">350€/demi journée</h4>
@@ -192,7 +192,7 @@
 			<div class="service">
 				<div class="service__description">
 					<h3 itemprop="name">Retouches</h3>
-					<p itemprop="description">Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
+					<p itemprop="description">Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficiez d’un rendu optimal pour vos publications</p>
 				</div>
 				<div class="service__price">
 					<h4 itemprop="price">50€/photo</h4>
@@ -216,14 +216,14 @@
 			<blockquote>
 				<p class="quote__text" itemprop="text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</p>
 			</blockquote>
-			<figcaption class="quote__author" itemprop="author">- Richard Avedon</figcaption>
+			<figcaption class="quote__author" itemprop="author">- Richard Avedon, photographe</figcaption>
 		</figure>
 	</div>
 	<section id="contact">
 		<div class="container">
 			<div class="form-container" itemscope itemtype="http://schema.org/CommunicateAction">
 				<h2 itemprop="headline">Une question ? Une demande de devis ?</h2>
-				<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
+				<p> N’hésitez pas à m’écrire ! Je vous répondrai en moins de 24 heures</p>
 				<form action="#" method="post" itemprop="potentialAction">
 					<label for="nom">
 						<span itemprop="nomLabel">Nom :</span>
@@ -239,6 +239,9 @@
 					</label>
 					<input type="submit" value="Envoyer">
 				</form>
+				<br>
+				<p><a href="tel:+33556677889">05 56 67 78 89</a> (du lundi au vendredi, de 10 à 19h)</p>
+				<address>68 avenue Alsace-Lorraine, 33200 Bordeaux</address>
 			</div>
 			<div class="picture right">
 				<img src="assets/images/Redimensionné/camera_50.webp" alt="Un appareil photo avec un objectif, dans un éclairage sombre et orangé." 
