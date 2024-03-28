@@ -1,21 +1,11 @@
 (function($) {   // fonction anonyme auto-invoquée qui prend un seul paramètre $ 
   $.fn.mauGallery = function(options) { 
     // $.fn = permet d'ajouter de nouvelles méthodes à l'objet jQuery
-    // ces méthodes seront disponibles pour être invoquées sur les objets jQuery 
-    // retournés par $(). 
-    //
     // mauGallery = a simple jQuery gallery for bootstrap 4 
-    //
     // options = objet JavaScript 
     var options = $.extend($.fn.mauGallery.defaults, options);
     // $.extend() = méthode fournie par jQuery pour fusionner le contenu de deux 
     // ou plusieurs objets JavaScript en un seul objet
-    //
-    // => fusionne les options par défaut fournies par 
-    // $.fn.mauGallery.defaults avec les options fournies par l'utilisateur
-    // => les options spécifiées par l'utilisateur écrasent les options par défaut 
-    // si elles ont le même nom de propriété
-    // le résultat de cette fusion est ensuite stocké dans la variable options
     var tagsCollection = [];  // liste des noms des filtres
     return this.each(function() {
     //   if (window.innerWidth <= 768) {
@@ -38,7 +28,6 @@
       $.fn.mauGallery.listeners(options);
       // ici, méthode qui est responsable d'attacher des gestionnaires d'événements 
       // à différents éléments de la galerie
-
       $(this)
         .children(".gallery-item")  // images de la gallerie
         .each(function(index) {
@@ -241,13 +230,13 @@
                         <div class="modal-body">
                             ${
                               navigation
-                                ? '<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>'
+                                ? '<div class="mg-prev" aria-label="Image précédente" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>'
                                 : '<span style="display:none;" />'
                             }
                             <img class="lightboxImage img-fluid" alt="Contenu de l'image affichée dans la modale au clique"/>
                             ${
                               navigation
-                                ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></div>'
+                                ? '<div class="mg-next"  aria-label="Image suivante" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></div>'
                                 : '<span style="display:none;" />'
                             }
                         </div>
